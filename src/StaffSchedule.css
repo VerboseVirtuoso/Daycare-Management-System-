@@ -1,0 +1,220 @@
+@import './index.css';
+
+.staff-schedule {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.date-selector {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+}
+
+.staff-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.staff-card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+}
+
+.staff-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.staff-info {
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.staff-info h3 {
+  margin: 0 0 var(--spacing-sm) 0;
+  color: var(--text-primary);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.staff-role {
+  margin: 0 0 var(--spacing-xs) 0;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.staff-contact {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.schedule-calendar {
+  overflow-x: auto;
+  padding: var(--spacing-sm);
+}
+
+.calendar-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.calendar-day-header {
+  text-align: center;
+  padding: var(--spacing-md);
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+}
+
+.day-name {
+  font-weight: 700;
+  color: var(--text-secondary);
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-xs);
+  letter-spacing: 1px;
+}
+
+.day-date {
+  font-size: 20px;
+  color: var(--text-primary);
+  font-weight: 800;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--spacing-sm);
+}
+
+.calendar-cell {
+  min-height: 120px;
+  padding: var(--spacing-sm);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+  transition: all var(--transition-base);
+}
+
+.calendar-cell:hover {
+  border-color: var(--primary-color);
+  background: var(--bg-tertiary);
+}
+
+.schedule-entry {
+  width: 100%;
+  padding: var(--spacing-sm);
+  background: var(--primary-gradient);
+  color: white;
+  border-radius: var(--radius-md);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.schedule-entry:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.schedule-time {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+}
+
+.schedule-role {
+  font-size: 11px;
+  opacity: 0.95;
+  font-weight: 500;
+}
+
+.add-schedule-btn {
+  width: 40px;
+  height: 40px;
+  border: 2px dashed var(--border-color);
+  background: transparent;
+  color: var(--text-tertiary);
+  border-radius: var(--radius-md);
+  font-size: 24px;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+}
+
+.add-schedule-btn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background: rgba(102, 126, 234, 0.1);
+  transform: rotate(90deg);
+}
+
+.schedule-form {
+  padding: var(--spacing-xl);
+}
+
+.btn-edit-small,
+.btn-delete-small {
+  padding: 6px 12px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-edit-small {
+  background: var(--info-light);
+  color: var(--info);
+}
+
+.btn-edit-small:hover {
+  background: var(--info);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.btn-delete-small {
+  background: var(--error-light);
+  color: var(--error);
+}
+
+.btn-delete-small:hover {
+  background: var(--error);
+  color: white;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .calendar-header,
+  .calendar-grid {
+    grid-template-columns: repeat(7, 140px);
+  }
+}

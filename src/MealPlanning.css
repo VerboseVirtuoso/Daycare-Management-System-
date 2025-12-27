@@ -1,0 +1,327 @@
+@import './index.css';
+
+.meal-planning {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.date-selector {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+}
+
+.date-selector label {
+  font-weight: 700;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.allergen-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--border-color);
+}
+
+.allergen-checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  cursor: pointer;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+}
+
+.allergen-checkbox:hover {
+  background: white;
+  border-color: var(--primary-color);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.allergen-checkbox input[type="checkbox"] {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+.allergen-checkbox span {
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.meal-planning-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-xl);
+}
+
+.daily-meals h2,
+.weekly-overview h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-lg) 0;
+  padding-bottom: var(--spacing-md);
+  border-bottom: 3px solid var(--border-color);
+}
+
+.meals-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.meal-card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+  border-left: 4px solid #f6ad55;
+  transition: all var(--transition-base);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid #f6ad55;
+}
+
+.meal-card:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.meal-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.meal-card-header h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.meal-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.btn-edit-small,
+.btn-delete-small {
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-edit-small {
+  background: var(--info-light);
+  color: var(--info);
+}
+
+.btn-edit-small:hover {
+  background: var(--info);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-delete-small {
+  background: var(--error-light);
+  color: var(--error);
+}
+
+.btn-delete-small:hover {
+  background: var(--error);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.meal-menu {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-sm);
+  font-size: 15px;
+}
+
+.meal-allergens {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--error-light);
+  border-radius: var(--radius-md);
+  color: var(--error);
+  font-size: 13px;
+  margin-top: var(--spacing-sm);
+  font-weight: 600;
+}
+
+.meal-empty {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--text-tertiary);
+}
+
+.meal-empty p {
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.btn-add-meal {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 2px dashed var(--border-color);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-add-meal:hover {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.weekly-overview {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+  height: fit-content;
+  border: 1px solid var(--border-light);
+}
+
+.weekly-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--spacing-sm);
+}
+
+.week-day {
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.week-day:hover {
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.week-day-header {
+  background: var(--bg-tertiary);
+  padding: var(--spacing-sm);
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.week-day-name {
+  font-weight: 700;
+  color: var(--text-secondary);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.week-day-date {
+  font-size: 20px;
+  color: var(--text-primary);
+  font-weight: 800;
+  margin-top: var(--spacing-xs);
+}
+
+.week-day-meals {
+  padding: var(--spacing-sm);
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  background: var(--bg-secondary);
+}
+
+.week-meal-item {
+  padding: var(--spacing-sm);
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  border-left: 3px solid #f6ad55;
+}
+
+.week-meal-type {
+  font-weight: 800;
+  color: #f6ad55;
+  min-width: 18px;
+  font-size: 12px;
+}
+
+.week-meal-menu {
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.week-day-empty {
+  color: var(--text-tertiary);
+  font-size: 11px;
+  text-align: center;
+  padding: var(--spacing-xl) var(--spacing-sm);
+  font-style: italic;
+}
+
+.meal-form {
+  padding: var(--spacing-xl);
+}
+
+@media (max-width: 1024px) {
+  .meal-planning-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .weekly-calendar {
+    grid-template-columns: repeat(7, 120px);
+    overflow-x: auto;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

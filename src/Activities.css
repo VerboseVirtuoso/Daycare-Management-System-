@@ -1,0 +1,152 @@
+@import './index.css';
+
+.activities {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.activities .page-header h1,
+.staff-schedule .page-header h1,
+.meal-planning .page-header h1,
+.communications .page-header h1 {
+  font-family: 'Fredoka', sans-serif;
+}
+
+.date-filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.date-filter label {
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.date-input {
+  padding: var(--spacing-md);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  transition: all var(--transition-base);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.date-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.activities-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.activity-card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+  border-left: 4px solid var(--primary-color);
+  transition: all var(--transition-base);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--primary-color);
+}
+
+.activity-card:hover {
+  transform: translateX(6px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-color);
+}
+
+.activity-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.activity-card-header h3 {
+  margin: 0 0 var(--spacing-xs) 0;
+  color: var(--text-primary);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.activity-child-name {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.activity-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-xs);
+}
+
+.activity-duration {
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 15px;
+  padding: 4px 10px;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: var(--radius-sm);
+}
+
+.activity-time {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+.activity-description {
+  margin-bottom: var(--spacing-md);
+}
+
+.activity-description p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.activity-notes {
+  padding: var(--spacing-md);
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+  border-left: 3px solid var(--primary-color);
+}
+
+.activity-notes strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.activity-form {
+  padding: var(--spacing-xl);
+}
+
+.activity-actions {
+  margin-top: var(--spacing-md);
+  display: flex;
+  gap: var(--spacing-sm);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-light);
+}
+
